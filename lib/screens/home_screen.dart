@@ -1,0 +1,66 @@
+import 'package:carousel_slider/carousel_options.dart';
+import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+
+import 'package:ecom_app/widgets/appbars/home_appbar.dart';
+import 'package:ecom_app/widgets/drawers/main_drawer.dart';
+import 'package:ecom_app/widgets/item_card.dart';
+import 'package:ecom_app/models/data.dart';
+
+import 'dart:math';
+
+class Home extends StatelessWidget {
+  final user;
+
+  Home({this.user});
+
+  @override
+  Widget build(BuildContext context) {
+    var rng = Random();
+    return MaterialApp(
+        home: Scaffold(
+            appBar: HomeAppBar(
+              title: 'Store',
+              color: Colors.yellow,
+            ),
+            drawer: MainDrawer(),
+            body: ListView(
+              children: <Widget>[
+                CarouselSlider(
+                    options: CarouselOptions(
+                        autoPlay: true, autoPlayInterval: Duration(seconds: 4)),
+                    items: [
+                      Image.network(
+                          'https://images.unsplash.com/photo-1527264935190-1401c51b5bbc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'),
+                      Image.network(
+                        'https://images.unsplash.com/photo-1526178613552-2b45c6c302f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+                      ),
+                    ]),
+                Container(
+                  child: ListView.builder(
+                      shrinkWrap: true,
+                      physics: const ClampingScrollPhysics(),
+                      itemCount: items.length,
+                      itemBuilder: (context, int index) {
+                        return ItemCard(
+                          item: items[index],
+                          trailingWidget: Container(
+                            child: IconButton(
+                                icon: Icon(
+                                  Icons.favorite_border,
+                                  color: Colors.red,
+                                  size: 25,
+                                ),
+                                onPressed: () {
+                                  print('Pressed!');
+                                }),
+                            margin: EdgeInsets.all(10),
+                          ),
+                        );
+                      }),
+                  margin: EdgeInsets.only(top: 60),
+                )
+              ],
+            )));
+  }
+}
