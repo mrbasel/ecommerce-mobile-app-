@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ecom_app/widgets/item_card.dart';
 import 'package:ecom_app/models/item.dart';
 import 'package:ecom_app/services/firestore.dart';
+import 'package:ecom_app/widgets/snackbars.dart';
 
 class CartScreen extends StatelessWidget {
   @override
@@ -56,6 +57,7 @@ class CartScreen extends StatelessWidget {
                             onPressed: (){
                               deleteItem(item.id);
                               Navigator.pop(context);
+                              Scaffold.of(context).showSnackBar(deleteItemSnackBar);
                             }
                             ),
                       );

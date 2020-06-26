@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:ecom_app/models/item.dart';
 import 'package:ecom_app/services/firestore.dart';
+import 'package:ecom_app/widgets/snackbars.dart';
 
 class ItemScreen extends StatelessWidget {
   final Item item;
@@ -56,14 +57,20 @@ class ItemScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              child: largeButton ?? FlatButton(
-                child: Text(
-                  'Add To My Cart',
-                  style: TextStyle(color: Colors.white),
+              child: Builder(
+                builder: (context) => 
+                largeButton ?? FlatButton(
+                  child: Text(
+                    'Add To My Cart',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                  color: Colors.blue[800],
+                  onPressed: () {
+                    addItem(item);
+                    Scaffold.of(context).showSnackBar(addItemSnackBar);                    
+                    }
                 ),
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                color: Colors.blue[800],
-                onPressed: () => addItem(item)
               ),
               bottom: 3,
               left: 5,
