@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'screens/login_screen.dart';
 import 'screens/home_screen.dart';
 
-import 'models/data.dart';
-
 void main() {
   runApp(MyApp());
 }

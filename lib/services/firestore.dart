@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ecom_app/models/item.dart';
 
 void addItem(item){
   Firestore.instance.runTransaction((transaction) async {

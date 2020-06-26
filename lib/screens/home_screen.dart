@@ -7,7 +7,6 @@ import 'package:ecom_app/widgets/drawers/main_drawer.dart';
 import 'package:ecom_app/widgets/item_card.dart';
 import 'package:ecom_app/models/data.dart';
 
-import 'dart:math';
 
 class Home extends StatelessWidget {
   final user;
@@ -16,7 +15,6 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var rng = Random();
     return MaterialApp(
         home: Scaffold(
             appBar: HomeAppBar(

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:ecom_app/screens/cart_screen.dart';
-import 'package:ecom_app/models/data.dart';
 
 class HomeAppBar extends StatefulWidget implements PreferredSizeWidget {
   HomeAppBar({Key key, this.title, this.color})
