@@ -5,12 +5,11 @@ import 'package:ecom_app/models/item.dart';
 
 class ItemCard extends StatelessWidget {
   final Item item;
-  // final String image;
-  // final String name;
-  // final dynamic price;
   final Widget trailingWidget;
+  final Widget largeButton;
+  final Widget smallButton;
 
-  ItemCard({this.item, this.trailingWidget});
+  ItemCard({this.item, this.trailingWidget, this.largeButton, this.smallButton});
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +51,7 @@ class ItemCard extends StatelessWidget {
         ),
       ),
       onTap: () => Navigator.push(
-          context, MaterialPageRoute(builder: (context) => ItemScreen(item: item,))),
+          context, MaterialPageRoute(builder: (context) => ItemScreen(item: item, largeButton: largeButton, smallButton: smallButton,))),
     );
   }
 }

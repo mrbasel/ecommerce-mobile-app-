@@ -1,23 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:ecom_app/screens/cart_screen.dart';
-
-// AppBar homeAppBar = AppBar(
-//   centerTitle: true,
-//   title: Text(
-//     'Store',
-//     style: TextStyle(color: Colors.black),
-//   ),
-//   backgroundColor: Colors.yellow,
-//   actions: <Widget>[
-//     IconButton(
-//         icon: Icon(
-//           Icons.shopping_cart,
-//           color: Colors.white,
-//         ),
-//         onPressed: () => Navigator.pushNamed(context, '/cart'))
-//   ],
-// );
+import 'package:ecom_app/models/data.dart';
 
 class HomeAppBar extends StatefulWidget implements PreferredSizeWidget {
   HomeAppBar({Key key, this.title, this.color})
