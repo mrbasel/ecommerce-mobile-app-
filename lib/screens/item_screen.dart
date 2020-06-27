@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ecom_app/models/item.dart';
 import 'package:ecom_app/services/firestore.dart';
 import 'package:ecom_app/widgets/snackbars.dart';
+import 'package:ecom_app/widgets/appbars/home_appbar.dart';
 
 class ItemScreen extends StatelessWidget {
   final Item item;
@@ -15,16 +16,11 @@ class ItemScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        // extendBodyBehindAppBar: true,
-        appBar: AppBar(
-          iconTheme: IconThemeData(color: Colors.black),
-          centerTitle: true,
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          title: Text(
-            'Item',
-            style: TextStyle(color: Colors.black),
-          ),
+        appBar: MainAppBar( 
+          title: 'item',
+          color: Colors.transparent,
+          showCart: false,
+          elevation: 0.0,
         ),
         body: Container(
           child: Stack(children: [

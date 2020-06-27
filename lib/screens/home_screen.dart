@@ -17,7 +17,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-            appBar: HomeAppBar(
+            appBar: MainAppBar(
               title: 'Store',
               color: Colors.yellow,
             ),
