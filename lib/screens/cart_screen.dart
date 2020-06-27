@@ -9,6 +9,8 @@ import 'package:ecom_app/services/firestore.dart';
 import 'package:ecom_app/widgets/snackbars.dart';
 
 class CartScreen extends StatelessWidget {
+  var total;
+
   @override
   Widget build(BuildContext context) {
     getTotal(total){
@@ -27,13 +29,13 @@ class CartScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.yellow,
       ),
-      body: StreamBuilder(
+      body: StreamBuilder<QuerySnapshot>(
           stream: Firestore.instance.collection('items').snapshots(),
           builder:
               (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-                var total = snapshot.data.documents.map((i) => i.data['price']);
+                  total = snapshot.data.documents.map((i) => i.data['price']);
             if (!snapshot.hasData)
-              return Center(child: CircularProgressIndicator());
+              return Center(child: CircularProgressIndicator());            
             return Stack(children: [
               ListView(
                 children: <Widget>[
@@ -84,7 +86,7 @@ class CartScreen extends StatelessWidget {
                   child: Container(
                     color: Colors.grey[50],
                     padding: EdgeInsets.all(20),
-                    child: FlatButton(
+                    child: snapshot.data.documents.length == 0 ? SizedBox() : FlatButton(
 
                       child: Text('Checkout Now (${getTotal(total)} SAR)', style: TextStyle(fontSize: 20, color: Colors.white),),
                       color: Colors.orange[600],
@@ -96,8 +98,8 @@ class CartScreen extends StatelessWidget {
                     right: 0,
                     left: 0,
                     )
-            ]);
-          }),
+            ]);}
+          ),
     );
   }
 }
