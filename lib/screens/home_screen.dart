@@ -43,18 +43,7 @@ class Home extends StatelessWidget {
                       itemBuilder: (context, int index) {
                         return ItemCard(
                           item: items[index],
-                          trailingWidget: Container(
-                            child: IconButton(
-                                icon: Icon(
-                                  Icons.favorite_border,
-                                  color: Colors.red,
-                                  size: 25,
-                                ),
-                                onPressed: () {
-                                  print('Pressed!');
-                                }),
-                            margin: EdgeInsets.all(10),
-                          ),
+                          trailingWidget: SizedBox(width: 20.0, height: 20.0,),
                         );
                       }),
                   margin: EdgeInsets.only(top: 60),
