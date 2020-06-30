@@ -1,6 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import 'package:ecom_app/models/item.dart';
+import 'package:ecom_app/models/models.dart';
 import 'package:ecom_app/services/firestore.dart';
 import 'package:ecom_app/widgets/snackbars.dart';
 import 'package:ecom_app/widgets/appbars/home_appbar.dart';
@@ -87,7 +88,7 @@ class ItemScreen extends StatelessWidget {
                         padding:
                             EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                         color: Colors.blue[800],
-                        onPressed: () {
+                        onPressed: () async{
                           addItem(item);
                           Scaffold.of(context).showSnackBar(addItemSnackBar);
                         }),
@@ -97,22 +98,6 @@ class ItemScreen extends StatelessWidget {
               left: 5,
               // right: 200,
             ),
-            // Positioned(
-            //   child: Tooltip(
-            //     message: 'Add To Wishlist',
-            //     child: smallButton ?? FlatButton(
-            //       child: Icon(
-            //         Icons.favorite_border,
-            //         color: Colors.white,
-            //       ),
-            //       padding: EdgeInsets.symmetric(horizontal: 25, vertical: 12),
-            //       color: Colors.red,
-            //       onPressed: () => print('Add to wishlist'),
-            //     ),
-            //   ),
-            //   bottom: 3,
-            //   right: 5,
-            // ),
           ]),
         ));
   }

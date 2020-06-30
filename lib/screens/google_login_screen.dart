@@ -11,16 +11,19 @@ class SigninScreen extends StatelessWidget {
       body: Container(
         child: Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Container(child: FlutterLogo(size: 120), margin: EdgeInsets.only(bottom: 25),),
+            Container(
+              child: FlutterLogo(size: 120),
+              margin: EdgeInsets.only(bottom: 25),
+            ),
             OutlineButton(
                 child: Text('Sign in with Google'),
                 color: Colors.green,
                 onPressed: () {
                   signInWithGoogle().then((value) =>
                       Navigator.pushReplacementNamed(context, '/main'));
-                }),
+                })
           ],
         )),
       ),

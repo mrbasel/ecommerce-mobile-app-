@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'package:ecom_app/services/auth.dart';
 
@@ -37,10 +38,15 @@ class MainDrawer extends StatelessWidget {
                     Icons.arrow_forward_ios,
                     size: 15,
                   ),
-                  onPressed: ()  async{
-                    var user = await FirebaseAuth.instance.currentUser();
-                    print(user.displayName);
-                  }),
+                  onPressed: null  ),
+                  onTap: () async{
+                    // QuerySnapshot querySnapshots = await Firestore.instance.collection("users").getDocuments();
+                    // for (DocumentSnapshot doc in querySnapshots.documents) {
+                    //   print(doc.data['name']);
+                    // }
+                    // var user = await FirebaseAuth.instance.us;
+                    // print(user.displayName);
+                  },
             ),
             Divider(
               height: 8,

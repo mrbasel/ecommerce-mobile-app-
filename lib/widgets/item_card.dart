@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:ecom_app/screens/item_screen.dart';
-import 'package:ecom_app/models/item.dart';
+import 'package:ecom_app/models/models.dart';
 
 class ItemCard extends StatelessWidget {
   final Item item;

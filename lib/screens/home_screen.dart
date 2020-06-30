@@ -8,10 +8,7 @@ import 'package:ecom_app/widgets/item_card.dart';
 import 'package:ecom_app/models/data.dart';
 
 class Home extends StatelessWidget {
-  final user;
-
-  Home({this.user});
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
