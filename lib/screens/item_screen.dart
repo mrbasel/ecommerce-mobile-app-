@@ -9,7 +9,6 @@ class ItemScreen extends StatelessWidget {
   final Item item;
   final Widget largeButton;
   final bool showCart;
-  // final Widget smallButton;
 
   ItemScreen({this.item, this.largeButton, this.showCart});
 

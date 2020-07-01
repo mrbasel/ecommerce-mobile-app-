@@ -1,36 +1,8 @@
 import 'models.dart';
 
-var dataList = [
-  '  Extract Vanilla Pure',
-  'Juice - Lime',
-  'Energy - Boo - Koo',
-  'Wine - Red, Cabernet Sauvignon',
-  'Flower - Commercial Bronze',
-  'Beef - Diced',
-  'Wine - Ruffino Chianti Classico',
-  'Port - 74 Brights',
-  'Lotus Leaves',
-  'Dasheen',
-  'Lighter - Bbq',
-  'Yucca',
-  'Wine - Cahors Ac 2000, Clos',
-  'Wine - Ruffino Chianti',
-  'Country Roll',
-  'Plate Pie Foil',
-  'Lid Tray - 16in Dome',
-  'Ice Cream Bar - Hagen Daz',
-  'Relish',
-  'Crackers - Melba Toast',
-  'Extract Vanilla Pure',
-  'Juice - Lime',
-  'Energy - Boo - Koo',
-  'Wine - Red, Cabernet Sauvignon',
-  'Flower - Commercial Bronze'
-];
 
-
-
-var items = [
+// mock data
+List<Item> items = [
   Item(
       name: 'Lenovo K9 Note Dual SIM - 64GB, 4GB RAM, 4G LTE, Black',
       price: 'SAR359.00',

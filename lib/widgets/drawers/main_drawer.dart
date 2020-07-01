@@ -38,14 +38,7 @@ class MainDrawer extends StatelessWidget {
                     size: 15,
                   ),
                   onPressed: null  ),
-                  onTap: () async{
-                    // QuerySnapshot querySnapshots = await Firestore.instance.collection("users").getDocuments();
-                    // for (DocumentSnapshot doc in querySnapshots.documents) {
-                    //   print(doc.data['name']);
-                    // }
-                    // var user = await FirebaseAuth.instance.us;
-                    // print(user.displayName);
-                  },
+                  onTap: null,
             ),
             Divider(
               height: 8,
@@ -111,7 +104,6 @@ class MainDrawer extends StatelessWidget {
               signOutGoogle();
               var user = await FirebaseAuth.instance.currentUser();
               print(user.displayName);
-              // Navigator.pop(context);
               Navigator.of(context).pushNamedAndRemoveUntil('/login', (route) => false);
             },
           ),

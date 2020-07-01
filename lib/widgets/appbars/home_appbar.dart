@@ -37,10 +37,13 @@ class _MainAppBarState extends State<MainAppBar> {
           widget.showCart == false
               ? SizedBox()
               : IconButton(
-                // TODO: document code here
+                // Using FutureBuilder to get the the users email 
                   icon: FutureBuilder(
                     future: getCurrentUserEmail(),
-                    builder: (context, AsyncSnapshot futureSnapshot) => 
+                    builder: (context, AsyncSnapshot futureSnapshot) =>
+                    
+                    // Using StreamBuilder to get the number of items
+                    // in user's cart  
                     StreamBuilder(
                         stream: Firestore.instance.collection('users').document(futureSnapshot.data).collection('items').snapshots(),
                         builder: (context, AsyncSnapshot streamSnapshot) {
@@ -58,8 +61,6 @@ class _MainAppBarState extends State<MainAppBar> {
                   onPressed: () {
                   Navigator.maybePop(context).then((value) => Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen())));
                   }
-                  //  Navigator.push(context,
-                      // MaterialPageRoute(builder: (context) => CartScreen())))
     )]);
   }
 }

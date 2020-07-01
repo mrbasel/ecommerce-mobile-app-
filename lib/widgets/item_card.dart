@@ -7,7 +7,6 @@ class ItemCard extends StatelessWidget {
   final Item item;
   final Widget trailingWidget;
   final Widget largeButton;
-  // final Widget smallButton;
   final bool showCart;
 
   ItemCard({this.item, this.trailingWidget, this.largeButton, this.showCart});

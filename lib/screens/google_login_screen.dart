@@ -19,7 +19,7 @@ class SigninScreen extends StatelessWidget {
                 child: Text('Sign in with Google'),
                 color: Colors.green,
                 onPressed: () {
-                  signInWithGoogle().then((value) =>
+                  signInWithGoogle().then((_) =>
                       Navigator.pushReplacementNamed(context, '/main'));
                 })
           ],

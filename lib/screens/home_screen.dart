@@ -21,12 +21,15 @@ class Home extends StatelessWidget {
           children: <Widget>[
             CarouselSlider(
                 options: CarouselOptions(
+                  aspectRatio: 2.4,
+                  enlargeCenterPage: true,
+                  enlargeStrategy: CenterPageEnlargeStrategy.height,
                     autoPlay: true, autoPlayInterval: Duration(seconds: 4)),
                 items: [
                   Image.network(
-                      'https://images.unsplash.com/photo-1527264935190-1401c51b5bbc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'),
+                      'https://images-eu.ssl-images-amazon.com/images/G/40/Gateway/Sunrise/CE/XCM_Manual_Lenovo_A7_750x375_en_411656cf-7355-4ad6-b08f-cf6cd0b541e0.jpg'),
                   Image.network(
-                    'https://images.unsplash.com/photo-1526178613552-2b45c6c302f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+                    'https://images-eu.ssl-images-amazon.com/images/G/40/Gateway/Sunrise/CE/Samaung_S10_750x375_en-F.jpg',
                   ),
                 ]),
             Container(

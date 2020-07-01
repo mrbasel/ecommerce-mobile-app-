@@ -10,7 +10,7 @@ import 'package:ecom_app/widgets/snackbars.dart';
 import 'package:ecom_app/utils/utils.dart';
 
 class CartScreen extends StatelessWidget {
-  var total;
+  // var total;
 
   getTotal(total) {
     final formatCurrency = NumberFormat('#,###.00');
@@ -44,7 +44,9 @@ class CartScreen extends StatelessWidget {
                   // stream: Firestore.instance.collection('items').snapshots(),
                   builder: (BuildContext context,
                       AsyncSnapshot<QuerySnapshot> snapshot) {
-                    total = snapshot.data.documents.map((i) => i.data['price']);
+                      
+                    // Store total price of cart items
+                    var total = snapshot.data.documents.map((i) => i.data['price']);
                     if (!snapshot.hasData)
                       return Center(child: CircularProgressIndicator());
                     return Stack(children: [

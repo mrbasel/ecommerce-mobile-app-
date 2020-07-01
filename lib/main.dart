@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       initialRoute: '/login',
       routes: {
-        // '/' : (BuildContext context) => LoginScreen(),
         '/login': (BuildContext context) => SigninScreen(),
         '/main': (context) => Home(),
         '/cart': (context) => CartScreen()
