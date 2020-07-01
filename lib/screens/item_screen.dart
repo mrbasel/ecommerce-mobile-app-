@@ -8,9 +8,10 @@ import 'package:ecom_app/widgets/appbars/home_appbar.dart';
 class ItemScreen extends StatelessWidget {
   final Item item;
   final Widget largeButton;
-  final Widget smallButton;
+  final bool showCart;
+  // final Widget smallButton;
 
-  ItemScreen({this.item, this.largeButton, this.smallButton});
+  ItemScreen({this.item, this.largeButton, this.showCart});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class ItemScreen extends StatelessWidget {
         appBar: MainAppBar(
           title: 'item',
           color: Colors.transparent,
-          showCart: false,
+          showCart: showCart ?? true,
           elevation: 0.0,
         ),
         body: Container(

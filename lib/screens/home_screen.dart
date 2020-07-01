@@ -36,6 +36,7 @@ class Home extends StatelessWidget {
                   itemCount: items.length,
                   itemBuilder: (context, int index) {
                     return ItemCard(
+                      showCart: true,
                       item: items[index],
                       trailingWidget: SizedBox(
                         width: 20.0,

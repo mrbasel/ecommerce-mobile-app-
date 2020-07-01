@@ -37,6 +37,7 @@ class _MainAppBarState extends State<MainAppBar> {
           widget.showCart == false
               ? SizedBox()
               : IconButton(
+                // TODO: document code here
                   icon: FutureBuilder(
                     future: getCurrentUserEmail(),
                     builder: (context, AsyncSnapshot futureSnapshot) => 
@@ -54,8 +55,11 @@ class _MainAppBarState extends State<MainAppBar> {
                           );
                         }),
                   ),
-                  onPressed: () => Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => CartScreen())))
-        ]);
+                  onPressed: () {
+                  Navigator.maybePop(context).then((value) => Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen())));
+                  }
+                  //  Navigator.push(context,
+                      // MaterialPageRoute(builder: (context) => CartScreen())))
+    )]);
   }
 }

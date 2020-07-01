@@ -79,6 +79,7 @@ class CartScreen extends StatelessWidget {
                                         .data['imgUrl']
                                         .toString());
                                 return ItemCard(
+                                  showCart: false,
                                   item: item,
                                   largeButton: FlatButton(
                                       child: Text(
