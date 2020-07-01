@@ -6,3 +6,8 @@ getCurrentUserEmail() async {
     print(currentUser.email);
     return currentUser.email;
   }
+
+// Future<FirebaseUser> getCurrentUser() async{
+//   FirebaseUser currentUser = await FirebaseAuth.instance.currentUser();
+//   return currentUser;
+// }

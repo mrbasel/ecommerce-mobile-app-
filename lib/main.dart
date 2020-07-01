@@ -1,6 +1,6 @@
-import 'package:ecom_app/screens/cart_screen.dart';
 import 'package:flutter/material.dart';
-import 'screens/login_screen.dart';
+
+import 'package:ecom_app/screens/cart_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/google_login_screen.dart';
 
