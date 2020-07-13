@@ -17,7 +17,6 @@ class ItemScreen extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: MainAppBar(
-          title: 'item',
           color: Colors.transparent,
           showCart: showCart ?? true,
           elevation: 0.0,

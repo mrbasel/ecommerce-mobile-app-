@@ -29,7 +29,7 @@ class _MainAppBarState extends State<MainAppBar> {
         centerTitle: true,
         elevation: widget.elevation,
         title: Text(
-          widget.title,
+          widget.title ?? '',
           style: TextStyle(color: Colors.black),
         ),
         backgroundColor: widget.color,
